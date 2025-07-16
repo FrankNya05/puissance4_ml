@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environnement virtuel
+puissance_env/
+.env/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Modèles et fichiers lourds
+*.pkl
+*.h5
+*.joblib
+
+# VS Code
+.vscode/
+
+#Fichier contenant la feuille de route du projet
+Idée de jeux_Projet python.docx
