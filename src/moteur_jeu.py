@@ -43,8 +43,7 @@ def insertion_pion(pion_inserer:int, grille:list):
             else:
                 index -= 1
         
-
-    return grille
+    return [grille,colonne] #Nous retournons egalement la colonne joué pour pouvoir utiliser cette information dans l'entrainement du modèle
 
 #Vérification d'une combinaison gagnante dans la grille
 def verification_gagnant(grille:list, joueur:int):
