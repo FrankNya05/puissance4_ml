@@ -39,7 +39,7 @@ def sauvegarde(liste_formate: list, chemin_fichier : str):
         newline = csv.writer(data_csv)
         newline.writerow(liste_formate)
 
-grille_test = [[0,0,0,0,0,0,0],[0,1,0,0,0,0,0],[0,0,1,0,0,0,0],[0,0,0,1,0,0,0],[0,0,0,0,1,0,0],[0,0,0,0,0,0,0]]
-recuperation_path()
-grille_plat = aplatissement_grille(grille_test)
-print (grille_plat)
+#grille_test = [[0,0,0,0,0,0,0],[0,1,0,0,0,0,0],[0,0,1,0,0,0,0],[0,0,0,1,0,0,0],[0,0,0,0,1,0,0],[0,0,0,0,0,0,0]]
+#recuperation_path()
+#grille_plat = aplatissement_grille(grille_test)
+#print (grille_plat)

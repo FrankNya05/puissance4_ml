@@ -61,10 +61,10 @@ def verification_gagnant(grille:list, joueur:int):
                         compteur+=1
                         dx+=1
                         if(compteur==4):
-                            print(f"Nous avons une combinaison gagnante pour le joueur {joueur}")
+                            print(f"Nous avons une combinaison gagnante verticale pour le joueur {joueur}")
                             state_vict=1
                             break
-                    dx=1
+                    dx=1;compteur = 1                    
 
                 # Recherche d'un pion correspondant dans la direction verticale vers le bas
                 if(n<4): # On vérifie s'il y a assez de case en bas pour pouvoir procéder à la vérification
@@ -72,11 +72,11 @@ def verification_gagnant(grille:list, joueur:int):
                         compteur+=1
                         dy+=1
                         if(compteur==4):
-                            print(f"Nous avons une combinaison gagnante pour le joueur {joueur}")
+                            print(f"Nous avons une combinaison gagnante horizontale pour le joueur {joueur}")
                             state_vict=1
                             break
-                    dy=1
-
+                    dy=1;compteur = 1
+                    
                 #Recherche d'un pion sur la diagonnale bas-droit
                 if(m<3 and n<4): # On vérifie s'il y a assez de case dans la diagonale pour pouvoir effectuer la vérification
                     while(grille[m+dx][n+dy]==grille[m][n]):
@@ -84,18 +84,30 @@ def verification_gagnant(grille:list, joueur:int):
                         dx+=1
                         dy+=1
                         if(compteur==4):
-                            print(f"Nous avons une combinaison gagnante pour le joueur {joueur}")
+                            print(f"Nous avons une combinaison gagnante oblique droite haute pour le joueur {joueur}")
                             state_vict=1
                             break
-                    dx=1;dy=1
+                    dx=1;dy=1;compteur = 1
+
+                #Recherche d'un pion sur la diagonale bas-gauche
+                if(m<3 and n>2): # On vérifie s'il y a assez de case dans la diagonale pour pouvoir effectuer la vérification
+                    while(grille[m+dx][n-dy]==grille[m][n]):
+                        compteur+=1
+                        dx+=1
+                        dy+=1
+                        if(compteur==4):
+                            print(f"Nous avons une combinaison gagnante oblique gauche basse pour le joueur {joueur}")
+                            state_vict=1
+                            break
+                    dx=1;dy=1;compteur = 1
 
     return state_vict
 
 
 
-grille_test = [[0,0,0,0,0,0,0],[0,1,0,0,0,0,0],[0,0,1,0,0,0,0],[0,0,0,1,0,0,0],[0,0,0,0,1,0,0],[0,0,0,0,0,0,0]]
-afficher_grille(grille_test)
-verification_gagnant(grille_test,1)
+#grille_test = [[0,0,0,0,0,0,0],[0,1,0,0,0,0,0],[0,0,1,0,0,0,0],[0,0,0,1,0,0,0],[0,0,0,0,1,0,0],[0,0,0,0,0,0,0]]
+#afficher_grille(grille_test)
+#verification_gagnant(grille_test,1)
 
 
 
