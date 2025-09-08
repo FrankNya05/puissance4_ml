@@ -23,5 +23,6 @@ Thumbs.db
 # VS Code
 .vscode/
 
-#Fichier contenant la feuille de route du projet
+#Fichier supplemmentaire a ignorer
 Idée de jeux_Projet python.docx
+remarque.txt

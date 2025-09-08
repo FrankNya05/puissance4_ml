@@ -1,5 +1,6 @@
 from moteur_jeu import*
 from enregistrement import*
+from joblib import load
 
 #Initialisation de la grille de jeu et du fichier de sauvegarde
 
@@ -7,6 +8,9 @@ grille = creation_grille() #creation de la grille de jeu
 grille_plat= aplatissement_grille(grille) #Aplatissement de la grille 
 data_path= recuperation_path() #Récuperation du chemin d'accès vers le repertoire data
 initialisation_fichier(grille_plat,data_path) #Initialisation du fichier csv
+
+#Chargement du modele de machine learning
+DecisionTre= load('DecisionTreep4.joblib')
 
 print("B.I.E.V.E.N.U.E DANS CETTE NOUVELLE PARTIE DE PUISSANCE 4")
 print()
