@@ -1,5 +1,6 @@
 from moteur_jeu import*
 from enregistrement import*
+from decisionTree_model import data_processing
 from joblib import load
 
 #Initialisation de la grille de jeu et du fichier de sauvegarde
